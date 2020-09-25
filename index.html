@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Converter</title>
+
+    </head>
+    <body>
+        <h1>Converter</h1>
+        <div id="drop-area">
+        <form class="my-form">
+            <p>Загрузите STL-файл с помощью диалога выбора файлов или перетащив нужные изображения в выделенную область</p>
+            <input type="file" id="fileElem" multiple accept=".stl" onchange="handleFiles(this.files)">
+            <label class="button" for="fileElem">Выбрать STL</label>
+        </form>
+        </div>
+        <div id="output-format-combobox" class="choice-box">
+            <label for="output-format-choice">Choose an output format:</label>
+            <input list="output-format-list" id="output-format-choice" name="output-format-choice" class="default"
+            onfocus="this.className='default'; this.value=''" onchange="this.blur()" onclick="this.value=''"/>
+            <datalist id="output-format-list">
+                <option value="3DS">
+                <option value="3MF"> <!-- export with pointer 0 -->
+                <option value="ASSBIN">
+                <option value="ASSJSON(JSON)">
+                <option value="ASSXML"><!-- don't open -->
+                <option value="COLLADA(DAE)">
+                <option value="FBX">
+                <option value="GLB">
+                <option value="GLTF"><!-- don't open -->
+                <option value="OBJ">
+                <option value="PLY">
+                <option value="STEP(STP)">
+                <option value="STL">
+                <option value="X">
+                <option value="X3D">            
+            </datalist>
+        </div>
+        <script src="js-code/index.js"></script>
+        <script src="js-code/converter/formats.js"></script>
+        <script src="js-code/files/download.js"></script>
+        <script src="js-code/files/upload.js"></script>
+        <script src="js-code/wasm-lib/arrays.js"></script>
+        <script type="module" src="js-code/converter/converter_core.js"></script>
+        <script type="module" src="js-code/converter/converter.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/dnd.css">
+    </body>
+</html>

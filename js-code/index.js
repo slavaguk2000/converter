@@ -2,8 +2,8 @@ let Converter
 function convert(array, inFormat, outFormat) {
     let len = array.byteLength;
     let ptr = passArrayToWasm(array, len);
-    inF = formats.indexOf(inFormat)
-    outF = formats.indexOf(outFormat)
+    inF = formats.indexOf(inFormat.toLowerCase())
+    outF = formats.indexOf(outFormat.toLowerCase())
     if (!~inF) {
         return null;
     }

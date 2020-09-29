@@ -50,7 +50,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "../../include/assimp/BaseImporter.h"
 
 #include "../MDL/MDLLoader.h"
-#include "../HMP/HMPFileData.h"
+#include "HMPFileData.h"
 
 namespace Assimp {
 using namespace HMP;

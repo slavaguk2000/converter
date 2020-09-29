@@ -46,18 +46,18 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "ColladaLoader.h"
 #include "ColladaParser.h"
 
-#include "../../include/assimp/anim.h>
-#include "../../include/assimp/scene.h>
-#include "../../include/assimp/DefaultLogger.hpp>
-#include "../../include/assimp/Importer.hpp>
-#include "../../include/assimp/importerdesc.h>
-#include "../../include/assimp/Defines.h>
+#include "../../include/assimp/anim.h"
+#include "../../include/assimp/scene.h"
+#include "../../include/assimp/DefaultLogger.hpp"
+#include "../../include/assimp/Importer.hpp"
+#include "../../include/assimp/importerdesc.h"
+#include "../../include/assimp/Defines.h"
 
-#include "../../include/assimp/fast_atof.h>
-#include "../../include/assimp/ParsingUtils.h>
-#include "../../include/assimp/SkeletonMeshBuilder.h>
-#include "../../include/assimp/CreateAnimMesh.h>
-#include "../../include/assimp/ZipArchiveIOSystem.h>
+#include "../../include/assimp/fast_atof.h"
+#include "../../include/assimp/ParsingUtils.h"
+#include "../../include/assimp/SkeletonMeshBuilder.h"
+#include "../../include/assimp/CreateAnimMesh.h"
+#include "../../include/assimp/ZipArchiveIOSystem.h"
 
 #include "time.h"
 #include "math.h"

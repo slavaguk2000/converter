@@ -21,9 +21,9 @@ function unhighlight(e) {
 }
 dropArea.addEventListener('drop', handleDrop, false)
 function handleDrop(e) {
-  let dt = e.dataTransfer
-  let files = dt.files
-  handleFiles(files)
+    let dt = e.dataTransfer
+    let files = dt.files
+    handleFiles(files)
 }
 function handleFiles(files) {
     ([...files]).forEach(uploadFile)
@@ -33,15 +33,15 @@ function uploadFile(file) {
     let reader = new FileReader();
     reader.readAsArrayBuffer(file)
     reader.onloadend = function(){
-      sourceName = file.name
-      pointIndex = sourceName.lastIndexOf(".") + 1
-      if(!pointIndex) return;
-      inFormat = sourceName.slice(pointIndex)
-      sourceName = sourceName.slice(0, pointIndex)
-      outFormat = getOutputFormat()
-      convertedArray = convert(reader.result, inFormat, outFormat) 
-      if (convertedArray){
-        download(convertedArray, sourceName + outFormat)
-      }
+        sourceName = file.name
+        pointIndex = sourceName.lastIndexOf(".") + 1
+        if(!pointIndex) return;
+        inFormat = sourceName.slice(pointIndex)
+        sourceName = sourceName.slice(0, pointIndex)
+        outFormat = getOutputFormat()
+        convertedArray = convert(reader.result, inFormat, outFormat) 
+        if (convertedArray){
+            download(convertedArray, sourceName + outFormat)
+        }
     }
 }

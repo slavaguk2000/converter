@@ -49,22 +49,22 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #ifndef ASSIMP_BUILD_NO_IRR_IMPORTER
 
-#include "Irr/IRRLoader.h"
-#include "Common/Importer.h"
+#include "IRRLoader.h"
+#include "../Common/Importer.h"
 
-#include "../../include/assimp/ParsingUtils.h>
-#include "../../include/assimp/fast_atof.h>
-#include "../../include/assimp/GenericProperty.h>
-#include "../../include/assimp/SceneCombiner.h>
-#include "../../include/assimp/StandardShapes.h>
-#include "../../include/assimp/MathFunctions.h>
-#include "../../include/assimp/DefaultLogger.hpp>
-#include "../../include/assimp/mesh.h>
-#include "../../include/assimp/material.h>
-#include "../../include/assimp/scene.h>
-#include "../../include/assimp/IOSystem.hpp>
-#include "../../include/assimp/postprocess.h>
-#include "../../include/assimp/importerdesc.h>
+#include "../../include/assimp/ParsingUtils.h"
+#include "../../include/assimp/fast_atof.h"
+#include "../../include/assimp/GenericProperty.h"
+#include "../../include/assimp/SceneCombiner.h"
+#include "../../include/assimp/StandardShapes.h"
+#include "../../include/assimp/MathFunctions.h"
+#include "../../include/assimp/DefaultLogger.hpp"
+#include "../../include/assimp/mesh.h"
+#include "../../include/assimp/material.h"
+#include "../../include/assimp/scene.h"
+#include "../../include/assimp/IOSystem.hpp"
+#include "../../include/assimp/postprocess.h"
+#include "../../include/assimp/importerdesc.h"
 
 #include <memory>
 

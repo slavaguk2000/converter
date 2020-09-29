@@ -48,15 +48,15 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #ifndef ASSIMP_BUILD_NO_DXF_IMPORTER
 
-#include "DXF/DXFLoader.h"
-#include "DXF/DXFHelper.h"
-#include "PostProcessing/ConvertToLHProcess.h"
+#include "DXFLoader.h"
+#include "DXFHelper.h"
+#include "../PostProcessing/ConvertToLHProcess.h"
 
-#include "../../include/assimp/ParsingUtils.h>
-#include "../../include/assimp/fast_atof.h>
-#include "../../include/assimp/IOSystem.hpp>
-#include "../../include/assimp/scene.h>
-#include "../../include/assimp/importerdesc.h>
+#include "../../include/assimp/ParsingUtils.h"
+#include "../../include/assimp/fast_atof.h"
+#include "../../include/assimp/IOSystem.hpp"
+#include "../../include/assimp/scene.h"
+#include "../../include/assimp/importerdesc.h"
 
 #include <numeric>
 

@@ -48,12 +48,12 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "XFileParser.h"
 #include "XFileHelper.h"
-#include "../../include/assimp/fast_atof.h>
-#include "../../include/assimp/Exceptional.h>
-#include "../../include/assimp/TinyFormatter.h>
-#include "../../include/assimp/ByteSwapper.h>
-#include "../../include/assimp/StringUtils.h>
-#include "../../include/assimp/DefaultLogger.hpp>
+#include "../../include/assimp/fast_atof.h"
+#include "../../include/assimp/Exceptional.h"
+#include "../../include/assimp/TinyFormatter.h"
+#include "../../include/assimp/ByteSwapper.h"
+#include "../../include/assimp/StringUtils.h"
+#include "../../include/assimp/DefaultLogger.hpp"
 
 
 using namespace Assimp;
@@ -65,7 +65,7 @@ using namespace Assimp::Formatter;
 #   ifdef ASSIMP_BUILD_NO_OWN_ZLIB
 #       include <zlib.h>
 #   else
-#       include "../contrib/zlib/zlib.h"
+#       include "../../contrib/zlib/zlib.h"
 #   endif
 
 // Magic identifier for MSZIP compressed data

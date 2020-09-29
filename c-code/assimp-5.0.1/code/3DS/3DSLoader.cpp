@@ -52,12 +52,12 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 // internal headers
 #include "3DSLoader.h"
-#include "../../include/assimp/Macros.h>
-#include "../../include/assimp/IOSystem.hpp>
-#include "../../include/assimp/scene.h>
-#include "../../include/assimp/DefaultLogger.hpp>
-#include "../../include/assimp/importerdesc.h>
-#include "../../include/assimp/StringComparison.h>
+#include "../../include/assimp/Macros.h"
+#include "../../include/assimp/IOSystem.hpp"
+#include "../../include/assimp/scene.h"
+#include "../../include/assimp/DefaultLogger.hpp"
+#include "../../include/assimp/importerdesc.h"
+#include "../../include/assimp/StringComparison.h"
 
 using namespace Assimp;
 

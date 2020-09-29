@@ -46,13 +46,13 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 /** @file Implementation of the MD2 importer class */
 #include "MD2Loader.h"
-#include "../../include/assimp/ByteSwapper.h>
+#include "../../include/assimp/ByteSwapper.h"
 #include "MD2NormalTable.h" // shouldn't be included by other units
-#include "../../include/assimp/DefaultLogger.hpp>
-#include "../../include/assimp/Importer.hpp>
-#include "../../include/assimp/IOSystem.hpp>
-#include "../../include/assimp/scene.h>
-#include "../../include/assimp/importerdesc.h>
+#include "../../include/assimp/DefaultLogger.hpp"
+#include "../../include/assimp/Importer.hpp"
+#include "../../include/assimp/IOSystem.hpp"
+#include "../../include/assimp/scene.h"
+#include "../../include/assimp/importerdesc.h"
 
 #include <memory>
 

@@ -44,16 +44,16 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #ifndef ASSIMP_BUILD_NO_X_IMPORTER
 
-#include "X/XFileImporter.h"
-#include "X/XFileParser.h"
-#include "PostProcessing/ConvertToLHProcess.h"
+#include "XFileImporter.h"
+#include "XFileParser.h"
+#include "../PostProcessing/ConvertToLHProcess.h"
 
-#include "../../include/assimp/TinyFormatter.h>
-#include "../../include/assimp/Defines.h>
-#include "../../include/assimp/IOSystem.hpp>
-#include "../../include/assimp/scene.h>
-#include "../../include/assimp/DefaultLogger.hpp>
-#include "../../include/assimp/importerdesc.h>
+#include "../../include/assimp/TinyFormatter.h"
+#include "../../include/assimp/Defines.h"
+#include "../../include/assimp/IOSystem.hpp"
+#include "../../include/assimp/scene.h"
+#include "../../include/assimp/DefaultLogger.hpp"
+#include "../../include/assimp/importerdesc.h"
 
 #include <cctype>
 #include <memory>

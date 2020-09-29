@@ -53,18 +53,18 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #ifndef ASSIMP_BUILD_NO_MD3_IMPORTER
 
-#include "MD3/MD3Loader.h"
-#include "Common/Importer.h"
+#include "MD3Loader.h"
+#include "../Common/Importer.h"
 
-#include "../../include/assimp/SceneCombiner.h>
-#include "../../include/assimp/GenericProperty.h>
-#include "../../include/assimp/RemoveComments.h>
-#include "../../include/assimp/ParsingUtils.h>
-#include "../../include/assimp/DefaultLogger.hpp>
-#include "../../include/assimp/IOSystem.hpp>
-#include "../../include/assimp/material.h>
-#include "../../include/assimp/scene.h>
-#include "../../include/assimp/importerdesc.h>
+#include "../../include/assimp/SceneCombiner.h"
+#include "../../include/assimp/GenericProperty.h"
+#include "../../include/assimp/RemoveComments.h"
+#include "../../include/assimp/ParsingUtils.h"
+#include "../../include/assimp/DefaultLogger.hpp"
+#include "../../include/assimp/IOSystem.hpp"
+#include "../../include/assimp/material.h"
+#include "../../include/assimp/scene.h"
+#include "../../include/assimp/importerdesc.h"
 
 #include <cctype>
 #include <memory>

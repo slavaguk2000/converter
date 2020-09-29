@@ -48,18 +48,18 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #ifndef ASSIMP_BUILD_NO_MDL_IMPORTER
 
-#include "MDL/MDLLoader.h"
-#include "MDL/MDLDefaultColorMap.h"
-#include "MD2/MD2FileData.h"
+#include "MDLLoader.h"
+#include "MDLDefaultColorMap.h"
+#include "../MD2/MD2FileData.h"
 
-#include "../../include/assimp/Macros.h>
-#include "../../include/assimp/qnan.h>
-#include "../../include/assimp/StringUtils.h>
-#include "../../include/assimp/Importer.hpp>
-#include "../../include/assimp/IOSystem.hpp>
-#include "../../include/assimp/scene.h>
-#include "../../include/assimp/DefaultLogger.hpp>
-#include "../../include/assimp/importerdesc.h>
+#include "../../include/assimp/Macros.h"
+#include "../../include/assimp/qnan.h"
+#include "../../include/assimp/StringUtils.h"
+#include "../../include/assimp/Importer.hpp"
+#include "../../include/assimp/IOSystem.hpp"
+#include "../../include/assimp/scene.h"
+#include "../../include/assimp/DefaultLogger.hpp"
+#include "../../include/assimp/importerdesc.h"
 
 #include <memory>
 

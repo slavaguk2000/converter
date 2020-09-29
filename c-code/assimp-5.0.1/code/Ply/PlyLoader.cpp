@@ -48,12 +48,12 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 // internal headers
 #include "PlyLoader.h"
-#include "../../include/assimp/IOStreamBuffer.h>
-#include "../../include/assimp/Macros.h>
+#include "../../include/assimp/IOStreamBuffer.h"
+#include "../../include/assimp/Macros.h"
 #include <memory>
-#include "../../include/assimp/IOSystem.hpp>
-#include "../../include/assimp/scene.h>
-#include "../../include/assimp/importerdesc.h>
+#include "../../include/assimp/IOSystem.hpp"
+#include "../../include/assimp/scene.h"
+#include "../../include/assimp/importerdesc.h"
 
 using namespace ::Assimp;
 

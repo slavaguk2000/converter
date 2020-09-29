@@ -50,14 +50,14 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <sstream>
 #include <stdarg.h>
 #include "ColladaParser.h"
-#include "../../include/assimp/fast_atof.h>
-#include "../../include/assimp/ParsingUtils.h>
-#include "../../include/assimp/StringUtils.h>
-#include "../../include/assimp/DefaultLogger.hpp>
-#include "../../include/assimp/IOSystem.hpp>
-#include "../../include/assimp/light.h>
-#include "../../include/assimp/TinyFormatter.h>
-#include "../../include/assimp/ZipArchiveIOSystem.h>
+#include "../../include/assimp/fast_atof.h"
+#include "../../include/assimp/ParsingUtils.h"
+#include "../../include/assimp/StringUtils.h"
+#include "../../include/assimp/DefaultLogger.hpp"
+#include "../../include/assimp/IOSystem.hpp"
+#include "../../include/assimp/light.h"
+#include "../../include/assimp/TinyFormatter.h"
+#include "../../include/assimp/ZipArchiveIOSystem.h"
 
 #include <memory>
 

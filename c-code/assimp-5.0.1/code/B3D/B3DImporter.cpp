@@ -49,16 +49,16 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef ASSIMP_BUILD_NO_B3D_IMPORTER
 
 // internal headers
-#include "B3D/B3DImporter.h"
-#include "PostProcessing/TextureTransform.h"
-#include "PostProcessing/ConvertToLHProcess.h"
+#include "B3DImporter.h"
+#include "../PostProcessing/TextureTransform.h"
+#include "../PostProcessing/ConvertToLHProcess.h"
 
-#include "../../include/assimp/StringUtils.h>
-#include "../../include/assimp/IOSystem.hpp>
-#include "../../include/assimp/anim.h>
-#include "../../include/assimp/scene.h>
-#include "../../include/assimp/DefaultLogger.hpp>
-#include "../../include/assimp/importerdesc.h>
+#include "../../include/assimp/StringUtils.h"
+#include "../../include/assimp/IOSystem.hpp"
+#include "../../include/assimp/anim.h"
+#include "../../include/assimp/scene.h"
+#include "../../include/assimp/DefaultLogger.hpp"
+#include "../../include/assimp/importerdesc.h"
 
 #include <memory>
 

@@ -47,15 +47,15 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef ASSIMP_BUILD_NO_MDC_IMPORTER
 
 // internal headers
-#include "MDC/MDCLoader.h"
-#include "MD3/MD3FileData.h"
-#include "MDC/MDCNormalTable.h" // shouldn't be included by other units
+#include "MDCLoader.h"
+#include "../MD3/MD3FileData.h"
+#include "MDCNormalTable.h" // shouldn't be included by other units
 
-#include "../../include/assimp/DefaultLogger.hpp>
-#include "../../include/assimp/Importer.hpp>
-#include "../../include/assimp/IOSystem.hpp>
-#include "../../include/assimp/scene.h>
-#include "../../include/assimp/importerdesc.h>
+#include "../../include/assimp/DefaultLogger.hpp"
+#include "../../include/assimp/Importer.hpp"
+#include "../../include/assimp/IOSystem.hpp"
+#include "../../include/assimp/scene.h"
+#include "../../include/assimp/importerdesc.h"
 
 #include <memory>
 

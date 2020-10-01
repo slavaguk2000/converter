@@ -44,8 +44,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "OgreXmlSerializer.h"
 #include "OgreParsingUtils.h"
 
-#include "../../include/assimp/TinyFormatter.h>
-#include "../../include/assimp/DefaultLogger.hpp>
+#include "../../include/assimp/TinyFormatter.h"
+#include "../../include/assimp/DefaultLogger.hpp"
 
 
 #ifndef ASSIMP_BUILD_NO_OGRE_IMPORTER

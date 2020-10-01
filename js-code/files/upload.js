@@ -30,6 +30,7 @@ function handleFiles(files) {
 }
 
 function uploadFile(file) {
+    console.log("Handle");
     let reader = new FileReader();
     reader.readAsArrayBuffer(file)
     reader.onloadend = function(){

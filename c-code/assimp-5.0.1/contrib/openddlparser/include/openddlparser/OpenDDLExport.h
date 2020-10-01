@@ -22,9 +22,9 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 -----------------------------------------------------------------------------------------------*/
 #pragma once
 
-#include <openddlparser/OpenDDLCommon.h>
-#include <openddlparser/OpenDDLStream.h>
-#include <openddlparser/Value.h>
+#include "OpenDDLCommon.h"
+#include "OpenDDLStream.h"
+#include "Value.h"
 
 BEGIN_ODDLPARSER_NS
 

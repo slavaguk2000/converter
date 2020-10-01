@@ -5,6 +5,7 @@
 
 
 
+
 let formats = [
     "",
     "3ds",
@@ -58,5 +59,9 @@ let formats = [
     "smd",
     "terragen",
     "unreal",
-    "xgl"
+    "xgl",
+    "stl",    
+    "ply",
+    "zae",
+    "ifc"
 ];

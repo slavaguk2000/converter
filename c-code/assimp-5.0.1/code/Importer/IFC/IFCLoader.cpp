@@ -55,7 +55,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #  ifdef ASSIMP_USE_HUNTER
 #    include <minizip/unzip.h>
 #  else
-#    include <unzip.h>
+#    include "../../../contrib/unzip/unzip.h"
 #  endif
 #endif
 
@@ -64,10 +64,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "IFCUtil.h"
 
-#include "../../include/assimp/MemoryIOWrapper.h>
-#include "../../include/assimp/scene.h>
-#include "../../include/assimp/Importer.hpp>
-#include "../../include/assimp/importerdesc.h>
+#include "../../../include/assimp/MemoryIOWrapper.h"
+#include "../../../include/assimp/scene.h"
+#include "../../../include/assimp/Importer.hpp"
+#include "../../../include/assimp/importerdesc.h"
 
 
 namespace Assimp {

@@ -45,11 +45,11 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef ASSIMP_BUILD_NO_OGRE_IMPORTER
 
 #include "OgreImporter.h"
-#include "../../include/assimp/TinyFormatter.h>
-#include "../../include/assimp/material.h>
-#include "../../include/assimp/scene.h>
-#include "../../include/assimp/DefaultLogger.hpp>
-#include "../../include/assimp/fast_atof.h>
+#include "../../include/assimp/TinyFormatter.h"
+#include "../../include/assimp/material.h"
+#include "../../include/assimp/scene.h"
+#include "../../include/assimp/DefaultLogger.hpp"
+#include "../../include/assimp/fast_atof.h"
 
 #include <vector>
 #include <sstream>

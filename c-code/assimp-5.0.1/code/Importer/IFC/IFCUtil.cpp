@@ -46,10 +46,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #ifndef ASSIMP_BUILD_NO_IFC_IMPORTER
 
-#include "Importer/IFC/IFCUtil.h"
-#include "Common/PolyTools.h"
-#include "PostProcessing/ProcessHelper.h"
-#include "../../include/assimp/Defines.h>
+#include "IFCUtil.h"
+#include "../../Common/PolyTools.h"
+#include "../../PostProcessing/ProcessHelper.h"
+#include "../../../include/assimp/Defines.h"
 
 namespace Assimp {
 namespace IFC {

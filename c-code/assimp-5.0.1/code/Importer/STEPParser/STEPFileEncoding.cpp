@@ -44,11 +44,11 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *  @brief STEP character handling, string un-escaping
  */
 #include "STEPFileEncoding.h"
-#include "../../include/assimp/fast_atof.h>
+#include "../../../include/assimp/fast_atof.h"
 #ifdef ASSIMP_USE_HUNTER
 #  include <utf8/utf8.h>
 #else
-#  include <contrib/utf8cpp/source/utf8.h>
+#  include "../../../contrib/utf8cpp/source/utf8.h"
 #endif
 
 #include <memory>

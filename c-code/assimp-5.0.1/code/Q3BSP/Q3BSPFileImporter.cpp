@@ -46,24 +46,24 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "Q3BSPFileParser.h"
 #include "Q3BSPFileData.h"
 
-#include "../../include/assimp/DefaultLogger.hpp>
+#include "../../include/assimp/DefaultLogger.hpp"
 
 #ifdef ASSIMP_BUILD_NO_OWN_ZLIB
 #   include <zlib.h>
 #else
-#   include "../contrib/zlib/zlib.h"
+#   include "../../contrib/zlib/zlib.h"
 #endif
 
-#include "../../include/assimp/types.h>
-#include "../../include/assimp/mesh.h>
-#include "../../include/assimp/scene.h>
-#include "../../include/assimp/ai_assert.h>
-#include "../../include/assimp/DefaultIOSystem.h>
-#include "../../include/assimp/ZipArchiveIOSystem.h>
-#include "../../include/assimp/importerdesc.h>
+#include "../../include/assimp/types.h"
+#include "../../include/assimp/mesh.h"
+#include "../../include/assimp/scene.h"
+#include "../../include/assimp/ai_assert.h"
+#include "../../include/assimp/DefaultIOSystem.h"
+#include "../../include/assimp/ZipArchiveIOSystem.h"
+#include "../../include/assimp/importerdesc.h"
 #include <vector>
 #include <sstream>
-#include "../../include/assimp/StringComparison.h>
+#include "../../include/assimp/StringComparison.h"
 
 static const aiImporterDesc desc = {
     "Quake III BSP Importer",

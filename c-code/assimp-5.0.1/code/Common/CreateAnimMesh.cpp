@@ -40,7 +40,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ---------------------------------------------------------------------------
 */
 
-#include "../../include/assimp/CreateAnimMesh.h>
+#include "../../include/assimp/CreateAnimMesh.h"
 
 namespace Assimp    {
 

@@ -48,19 +48,19 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #ifndef ASSIMP_BUILD_NO_LWS_IMPORTER
 
-#include "LWS/LWSLoader.h"
-#include "PostProcessing/ConvertToLHProcess.h"
-#include "Common/Importer.h"
+#include "LWSLoader.h"
+#include "../PostProcessing/ConvertToLHProcess.h"
+#include "../Common/Importer.h"
 
-#include "../../include/assimp/ParsingUtils.h>
-#include "../../include/assimp/fast_atof.h>
-#include "../../include/assimp/SceneCombiner.h>
-#include "../../include/assimp/GenericProperty.h>
-#include "../../include/assimp/SkeletonMeshBuilder.h>
-#include "../../include/assimp/DefaultLogger.hpp>
-#include "../../include/assimp/scene.h>
-#include "../../include/assimp/IOSystem.hpp>
-#include "../../include/assimp/importerdesc.h>
+#include "../../include/assimp/ParsingUtils.h"
+#include "../../include/assimp/fast_atof.h"
+#include "../../include/assimp/SceneCombiner.h"
+#include "../../include/assimp/GenericProperty.h"
+#include "../../include/assimp/SkeletonMeshBuilder.h"
+#include "../../include/assimp/DefaultLogger.hpp"
+#include "../../include/assimp/scene.h"
+#include "../../include/assimp/IOSystem.hpp"
+#include "../../include/assimp/importerdesc.h"
 
 #include <memory>
 

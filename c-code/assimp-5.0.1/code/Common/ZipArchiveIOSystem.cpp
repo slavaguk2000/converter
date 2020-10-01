@@ -44,10 +44,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *  @brief Zip File I/O implementation for #Importer
  */
 
-#include "../../include/assimp/ZipArchiveIOSystem.h>
-#include "../../include/assimp/BaseImporter.h>
+#include "../../include/assimp/ZipArchiveIOSystem.h"
+#include "../../include/assimp/BaseImporter.h"
 
-#include "../../include/assimp/ai_assert.h>
+#include "../../include/assimp/ai_assert.h"
 
 #include <map>
 #include <memory>
@@ -55,7 +55,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifdef ASSIMP_USE_HUNTER
 #  include <minizip/unzip.h>
 #else
-#  include <unzip.h>
+#  include "../../contrib/unzip/unzip.h"
 #endif
 
 namespace Assimp {

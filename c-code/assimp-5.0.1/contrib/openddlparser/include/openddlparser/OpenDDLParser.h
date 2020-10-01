@@ -22,10 +22,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 -----------------------------------------------------------------------------------------------*/
 #pragma once
 
-#include <openddlparser/OpenDDLCommon.h>
-#include <openddlparser/DDLNode.h>
-#include <openddlparser/OpenDDLParserUtils.h>
-#include <openddlparser/Value.h>
+#include "OpenDDLCommon.h"
+#include "DDLNode.h"
+#include "OpenDDLParserUtils.h"
+#include "Value.h"
 
 #include <vector>
 #include <string>

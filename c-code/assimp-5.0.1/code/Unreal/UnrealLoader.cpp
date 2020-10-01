@@ -52,17 +52,17 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #ifndef ASSIMP_BUILD_NO_3D_IMPORTER
 
-#include "Unreal/UnrealLoader.h"
-#include "PostProcessing/ConvertToLHProcess.h"
+#include "UnrealLoader.h"
+#include "../PostProcessing/ConvertToLHProcess.h"
 
-#include "../../include/assimp/StreamReader.h>
-#include "../../include/assimp/ParsingUtils.h>
-#include "../../include/assimp/fast_atof.h>
-#include "../../include/assimp/Importer.hpp>
-#include "../../include/assimp/DefaultLogger.hpp>
-#include "../../include/assimp/IOSystem.hpp>
-#include "../../include/assimp/scene.h>
-#include "../../include/assimp/importerdesc.h>
+#include "../../include/assimp/StreamReader.h"
+#include "../../include/assimp/ParsingUtils.h"
+#include "../../include/assimp/fast_atof.h"
+#include "../../include/assimp/Importer.hpp"
+#include "../../include/assimp/DefaultLogger.hpp"
+#include "../../include/assimp/IOSystem.hpp"
+#include "../../include/assimp/scene.h"
+#include "../../include/assimp/importerdesc.h"
 
 #include <memory>
 

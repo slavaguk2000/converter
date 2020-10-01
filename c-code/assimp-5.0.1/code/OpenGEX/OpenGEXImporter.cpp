@@ -41,17 +41,17 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #ifndef ASSIMP_BUILD_NO_OPENGEX_IMPORTER
 
-#include "OpenGEX/OpenGEXImporter.h"
-#include "PostProcessing/MakeVerboseFormat.h"
+#include "OpenGEXImporter.h"
+#include "../PostProcessing/MakeVerboseFormat.h"
 
-#include "../../include/assimp/DefaultIOSystem.h>
-#include "../../include/assimp/DefaultLogger.hpp>
-#include "../../include/assimp/StringComparison.h>
+#include "../../include/assimp/DefaultIOSystem.h"
+#include "../../include/assimp/DefaultLogger.hpp"
+#include "../../include/assimp/StringComparison.h"
 
-#include <openddlparser/OpenDDLParser.h>
-#include "../../include/assimp/scene.h>
-#include "../../include/assimp/ai_assert.h>
-#include "../../include/assimp/importerdesc.h>
+#include "../../contrib/openddlparser/include/openddlparser/OpenDDLParser.h"
+#include "../../include/assimp/scene.h"
+#include "../../include/assimp/ai_assert.h"
+#include "../../include/assimp/importerdesc.h"
 
 #include <vector>
 

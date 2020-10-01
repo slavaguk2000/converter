@@ -11,9 +11,9 @@ const std::vector<std::string> getFormats(){
         "3ds",                                      
         "3mf",                                        
         "assbin",                                    
-        "assjson",                                    
+        "json",                                    
         "assxml",                                    
-        "collada",                                    
+        "dae",                                    
         "fbx",                                        
         "glb2",                                        
         "gltf2",                                    
@@ -61,7 +61,9 @@ const std::vector<std::string> getFormats(){
         "unreal",                                    
         "xgl",
         "stl",    
-        "ply"                                  
+        "ply",
+        "zae",
+        "ifc"                                 
     };    
     return formats;
 }

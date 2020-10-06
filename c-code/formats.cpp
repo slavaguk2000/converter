@@ -27,7 +27,7 @@ const std::vector<std::string> getFormats(){
         "amf",                                        
         "ase",                                        
         "b3d",                                        
-        "blender",                                    
+        "blend",                                    
         "bvh",                                        
         "c4d",                                        
         "cob",                                        

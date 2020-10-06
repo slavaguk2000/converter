@@ -27,7 +27,7 @@ let formats = [
     "amf",
     "ase",
     "b3d",
-    "blender",
+    "blend",
     "bvh",
     "c4d",
     "cob",

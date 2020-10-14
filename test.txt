@@ -1,0 +1,6 @@
+success:
+stl -> 3ds, assbin, assxml, 
+
+
+error:
+stl -> 3mf, assjson(json not found)

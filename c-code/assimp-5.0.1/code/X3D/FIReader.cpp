@@ -47,7 +47,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef ASSIMP_BUILD_NO_X3D_IMPORTER
 
 #include "FIReader.hpp"
-#include "../../include/assimp/StringUtils.h>
+#include "../../include/assimp/StringUtils.h"
 
 // Workaround for issue #1361
 // https://github.com/assimp/assimp/issues/1361
@@ -55,17 +55,17 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #  define _GLIBCXX_USE_C99 1
 #endif
 
-#include "../../include/assimp/Exceptional.h>
-#include "../../include/assimp/IOStream.hpp>
-#include "../../include/assimp/types.h>
-#include "../../include/assimp/MemoryIOWrapper.h>
-#include "../../include/assimp/irrXMLWrapper.h>
+#include "../../include/assimp/Exceptional.h"
+#include "../../include/assimp/IOStream.hpp"
+#include "../../include/assimp/types.h"
+#include "../../include/assimp/MemoryIOWrapper.h"
+#include "../../include/assimp/irrXMLWrapper.h"
 #ifdef ASSIMP_USE_HUNTER
 #  include <utf8/utf8.h>
 #else
-#  include "../contrib/utf8cpp/source/utf8.h"
+#  include "../../contrib/utf8cpp/source/utf8.h"
 #endif
-#include "../../include/assimp/fast_atof.h>
+#include "../../include/assimp/fast_atof.h"
 #include <stack>
 #include <map>
 #include <iostream>

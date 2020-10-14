@@ -97,6 +97,7 @@ public:
     void ReadBinaryTexture(IOStream * stream, aiTexture* tex);
     void ReadBinaryLight( IOStream * stream, aiLight* l );
     void ReadBinaryCamera( IOStream * stream, aiCamera* cam );
+    ~AssbinImporter();//TODO : delete string
 };
 
 } // end of namespace Assimp

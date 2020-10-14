@@ -48,11 +48,11 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "X3DImporter.hpp"
 #include "X3DImporter_Macro.hpp"
-#include "../../include/assimp/StringUtils.h>
+#include "../../include/assimp/StringUtils.h"
 
 // Header files, Assimp.
-#include "../../include/assimp/DefaultIOSystem.h>
-#include "../../include/assimp/fast_atof.h>
+#include "../../include/assimp/DefaultIOSystem.h"
+#include "../../include/assimp/fast_atof.h"
 #include "FIReader.hpp"
 
 // Header files, stdlib.

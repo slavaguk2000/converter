@@ -47,14 +47,14 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef ASSIMP_BUILD_NO_XGL_IMPORTER
 
 #include "XGLLoader.h"
-#include "../../include/assimp/ParsingUtils.h>
-#include "../../include/assimp/fast_atof.h>
+#include "../../include/assimp/ParsingUtils.h"
+#include "../../include/assimp/fast_atof.h"
 
-#include "../../include/assimp/StreamReader.h>
-#include "../../include/assimp/MemoryIOWrapper.h>
-#include "../../include/assimp/mesh.h>
-#include "../../include/assimp/scene.h>
-#include "../../include/assimp/importerdesc.h>
+#include "../../include/assimp/StreamReader.h"
+#include "../../include/assimp/MemoryIOWrapper.h"
+#include "../../include/assimp/mesh.h"
+#include "../../include/assimp/scene.h"
+#include "../../include/assimp/importerdesc.h"
 #include <cctype>
 #include <memory>
 
@@ -67,7 +67,7 @@ using namespace irr::io;
 #   ifdef ASSIMP_BUILD_NO_OWN_ZLIB
 #       include <zlib.h>
 #   else
-#       include <contrib/zlib/zlib.h>
+#       include "../../contrib/zlib/zlib.h"
 #   endif
 #endif
 
@@ -93,7 +93,6 @@ static const aiImporterDesc desc = {
     "xgl zgl"
 };
 
-
 // ------------------------------------------------------------------------------------------------
 // Constructor to be privately used by Importer
 XGLImporter::XGLImporter()
@@ -101,11 +100,12 @@ XGLImporter::XGLImporter()
 , m_scene( nullptr ) {
     // empty
 }
-
+#include <stdio.h>//TODO : delete string
 // ------------------------------------------------------------------------------------------------
 // Destructor, private as well
 XGLImporter::~XGLImporter() {
     // empty
+    printf("~XGLImporter\n"); //TODO : delete string
 }
 
 // ------------------------------------------------------------------------------------------------

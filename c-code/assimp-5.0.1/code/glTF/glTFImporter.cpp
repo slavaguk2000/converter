@@ -42,18 +42,18 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #ifndef ASSIMP_BUILD_NO_GLTF_IMPORTER
 
-#include "glTF/glTFImporter.h"
-#include "glTF/glTFAsset.h"
-#include "glTF/glTFAssetWriter.h"
-#include "PostProcessing/MakeVerboseFormat.h"
+#include "glTFImporter.h"
+#include "glTFAsset.h"
+#include "glTFAssetWriter.h"
+#include "../PostProcessing/MakeVerboseFormat.h"
 
-#include "../../include/assimp/StringComparison.h>
-#include "../../include/assimp/StringUtils.h>
-#include "../../include/assimp/Importer.hpp>
-#include "../../include/assimp/scene.h>
-#include "../../include/assimp/ai_assert.h>
-#include "../../include/assimp/DefaultLogger.hpp>
-#include "../../include/assimp/importerdesc.h>
+#include "../../include/assimp/StringComparison.h"
+#include "../../include/assimp/StringUtils.h"
+#include "../../include/assimp/Importer.hpp"
+#include "../../include/assimp/scene.h"
+#include "../../include/assimp/ai_assert.h"
+#include "../../include/assimp/DefaultLogger.hpp"
+#include "../../include/assimp/importerdesc.h"
 
 #include <memory>
 

@@ -44,13 +44,13 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "D3MFImporter.h"
 
-#include "../../include/assimp/scene.h>
-#include "../../include/assimp/IOSystem.hpp>
-#include "../../include/assimp/DefaultLogger.hpp>
-#include "../../include/assimp/importerdesc.h>
-#include "../../include/assimp/StringComparison.h>
-#include "../../include/assimp/StringUtils.h>
-#include "../../include/assimp/ZipArchiveIOSystem.h>
+#include "../../include/assimp/scene.h"
+#include "../../include/assimp/IOSystem.hpp"
+#include "../../include/assimp/DefaultLogger.hpp"
+#include "../../include/assimp/importerdesc.h"
+#include "../../include/assimp/StringComparison.h"
+#include "../../include/assimp/StringUtils.h"
+#include "../../include/assimp/ZipArchiveIOSystem.h"
 
 #include <string>
 #include <vector>
@@ -59,9 +59,9 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <memory>
 
 #include "D3MFOpcPackage.h"
-#include "../../include/assimp/irrXMLWrapper.h>
+#include "../../include/assimp/irrXMLWrapper.h"
 #include "3MFXmlTags.h"
-#include "../../include/assimp/fast_atof.h>
+#include "../../include/assimp/fast_atof.h"
 
 #include <iomanip>
 

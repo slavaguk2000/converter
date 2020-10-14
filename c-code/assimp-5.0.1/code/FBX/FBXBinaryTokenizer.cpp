@@ -49,10 +49,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "FBXTokenizer.h"
 #include "FBXUtil.h"
-#include "../../include/assimp/defs.h>
+#include "../../include/assimp/defs.h"
 #include <stdint.h>
-#include "../../include/assimp/Exceptional.h>
-#include "../../include/assimp/ByteSwapper.h>
+#include "../../include/assimp/Exceptional.h"
+#include "../../include/assimp/ByteSwapper.h"
 
 namespace Assimp {
 namespace FBX {

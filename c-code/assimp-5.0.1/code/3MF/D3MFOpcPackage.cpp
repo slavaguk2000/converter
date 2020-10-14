@@ -43,13 +43,13 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef ASSIMP_BUILD_NO_3MF_IMPORTER
 
 #include "D3MFOpcPackage.h"
-#include "../../include/assimp/Exceptional.h>
+#include "../../include/assimp/Exceptional.h"
 
-#include "../../include/assimp/IOStream.hpp>
-#include "../../include/assimp/IOSystem.hpp>
-#include "../../include/assimp/DefaultLogger.hpp>
-#include "../../include/assimp/ai_assert.h>
-#include "../../include/assimp/ZipArchiveIOSystem.h>
+#include "../../include/assimp/IOStream.hpp"
+#include "../../include/assimp/IOSystem.hpp"
+#include "../../include/assimp/DefaultLogger.hpp"
+#include "../../include/assimp/ai_assert.h"
+#include "../../include/assimp/ZipArchiveIOSystem.h"
 
 #include <cstdlib>
 #include <memory>

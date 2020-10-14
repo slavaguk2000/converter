@@ -52,7 +52,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "FBXImportSettings.h"
 #include "FBXDocumentUtil.h"
 #include "FBXProperties.h"
-#include "../../include/assimp/ByteSwapper.h>
+#include "../../include/assimp/ByteSwapper.h"
 
 #include <algorithm> // std::transform
 #include "FBXUtil.h"

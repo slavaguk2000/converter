@@ -3,6 +3,6 @@
 
 struct aiScene;
 
-const struct aiScene* import_model(void* pointer, int size, int inFormat);
+const struct aiScene* import_model(void* pointer, int size, char* inFormat);
 
 #endif 

@@ -2,7 +2,7 @@ let Converter
 function convert(array, inFormat, outFormat) {
     let len = array.byteLength;
     let ptr = passArrayToWasm(array, len);
-    inF = formats.indexOf(inFormat.toLowerCase())
+    inF = inFormat.toLowerCase()
     outF = formats.indexOf(outFormat.toLowerCase())
     if (!~inF) {
         return null;
@@ -11,7 +11,8 @@ function convert(array, inFormat, outFormat) {
         outputComboBox.className="red";
         return null;
     }
-    let array_data_pointer = Converter._convert(ptr, len, inF, outF);
+    console.log("in js: " + inF)
+    let array_data_pointer = Converter.ccall('convert', 'number', ['number', 'number', 'string', 'number'], [ptr, len, inF, outF]);
     if(!array_data_pointer) return null
     let new_pointer = getUInt32(array_data_pointer)
     let new_size = getUInt32(array_data_pointer + 4)
@@ -20,3 +21,5 @@ function convert(array, inFormat, outFormat) {
     // wasm._free(new_pointer);
     return new_array;
 }
+
+//ptr = `` allocate(intArrayFromString(someString), ALLOC_NORMAL) <allocate>

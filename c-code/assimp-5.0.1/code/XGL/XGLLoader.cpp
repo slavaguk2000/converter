@@ -100,12 +100,10 @@ XGLImporter::XGLImporter()
 , m_scene( nullptr ) {
     // empty
 }
-#include <stdio.h>//TODO : delete string
 // ------------------------------------------------------------------------------------------------
 // Destructor, private as well
 XGLImporter::~XGLImporter() {
     // empty
-    printf("~XGLImporter\n"); //TODO : delete string
 }
 
 // ------------------------------------------------------------------------------------------------

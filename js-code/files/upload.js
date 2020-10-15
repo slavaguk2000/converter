@@ -34,15 +34,40 @@ function uploadFile(file) {
     let reader = new FileReader();
     reader.readAsArrayBuffer(file)
     reader.onloadend = function(){
-        sourceName = file.name
-        pointIndex = sourceName.lastIndexOf(".") + 1
-        if(!pointIndex) return;
-        inFormat = sourceName.slice(pointIndex)
-        sourceName = sourceName.slice(0, pointIndex)
-        outFormat = getOutputFormat()
-        convertedArray = convert(reader.result, inFormat, outFormat) 
-        if (convertedArray){
-            download(convertedArray, sourceName + outFormat)
+        for (var i = 21; i > 0; i--){
+            try {
+                sourceName = file.name
+                pointIndex = sourceName.lastIndexOf(".") + 1
+                if(!pointIndex) return;
+                inFormat = sourceName.slice(pointIndex).toLowerCase()
+                sourceName = sourceName.slice(0, pointIndex)
+                outFormat = i
+                convertedArray = convert(reader.result, inFormat, outFormat) 
+                if (convertedArray){
+                    download(convertedArray, "from_" + inFormat + "_" + sourceName + formats[outFormat])
+                }
+            } catch (error) {
+                console.log(error)   
+            }
         }
     }
 }
+
+
+// function uploadFile(file) {
+//     console.log("Handle");
+//     let reader = new FileReader();
+//     reader.readAsArrayBuffer(file)
+//     reader.onloadend = function(){
+//         sourceName = file.name
+//         pointIndex = sourceName.lastIndexOf(".") + 1
+//         if(!pointIndex) return;
+//         inFormat = sourceName.slice(pointIndex)
+//         sourceName = sourceName.slice(0, pointIndex)
+//         outFormat = formats.indexOf(getOutputFormat().toLowerCase())
+//         convertedArray = convert(reader.result, inFormat, outFormat) 
+//         if (convertedArray){
+//             download(convertedArray, sourceName + outFormat)
+//         }
+//     }
+// }

@@ -14,7 +14,7 @@ int main()
 
 int convert_cpp(int pointer, int size, char* inFormat, int outFormat)
 {
-    printf("convert\n");
+    // printf("convert\n");
     const struct aiScene* scene = import_model((void*)pointer, size, inFormat);
     if(!scene) return 0;
     return (int)export_model(scene, outFormat);

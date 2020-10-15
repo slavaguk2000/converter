@@ -1,25 +1,4 @@
-cls
-
-@echo off
-
-echo.
-echo. 
-echo.
-echo. 
-echo      \\\\\\\          \\\\\\       \\          \\     \\\\\\\\      \\\\\\    \\           \\\\\\\\ 
-echo    \\       \\      \\      \\     \\\\      \\\\     \\      \\      \\      \\           \\ 
-echo    \\              \\        \\    \\  \\  \\  \\     \\       \\     \\      \\           \\   
-echo    \\              \\        \\    \\    \\    \\     \\      \\      \\      \\           \\\\\ 
-echo    \\              \\        \\    \\          \\     \\\\\\\\        \\      \\           \\ 
-echo    \\        \\     \\      \\     \\          \\     \\              \\      \\           \\ 
-echo      \\\\\\\\         \\\\\\       \\          \\     \\            \\\\\\    \\\\\\\\\\   \\\\\\\\\
-echo.
-echo. 
-echo.
-echo.
-
-@echo on
-
+call compile1.bat
 em++ -s ALLOW_MEMORY_GROWTH=1 ^
 -s EXPORT_ES6=1 ^
 -s MODULARIZE=1 ^
@@ -32,28 +11,8 @@ em++ -s ALLOW_MEMORY_GROWTH=1 ^
 -s EXPORTED_FUNCTIONS="['_malloc','_free', '_main', '_printf']" ^
 -s EXTRA_EXPORTED_RUNTIME_METHODS="['ccall']" ^
 -o js-code/converter/converter_core.js c-code/main.cpp ^
+temp/common.o ^
 c-code/importer.cpp ^
-c-code/assimp-5.0.1/code/Common/BaseProcess.cpp ^
-c-code/assimp-5.0.1/code/Common/BaseImporter.cpp ^
-c-code/assimp-5.0.1/code/Common/Bitmap.cpp ^
-c-code/assimp-5.0.1/code/Common/CreateAnimMesh.cpp ^
-c-code/assimp-5.0.1/code/Common/DefaultIOSystem.cpp ^
-c-code/assimp-5.0.1/code/Common/DefaultLogger.cpp ^
-c-code/assimp-5.0.1/code/Common/Exporter.cpp ^
-c-code/assimp-5.0.1/code/Common/Importer.cpp ^
-c-code/assimp-5.0.1/code/Common/ImporterRegistry.cpp ^
-c-code/assimp-5.0.1/code/Common/PostStepRegistry.cpp ^
-c-code/assimp-5.0.1/code/Common/RemoveComments.cpp ^
-c-code/assimp-5.0.1/code/Common/scene.cpp ^
-c-code/assimp-5.0.1/code/Common/SceneCombiner.cpp ^
-c-code/assimp-5.0.1/code/Common/ScenePreprocessor.cpp ^
-c-code/assimp-5.0.1/code/Common/SGSpatialSort.cpp ^
-c-code/assimp-5.0.1/code/Common/SkeletonMeshBuilder.cpp ^
-c-code/assimp-5.0.1/code/Common/SpatialSort.cpp ^
-c-code/assimp-5.0.1/code/Common/StandardShapes.cpp ^
-c-code/assimp-5.0.1/code/Common/Subdivision.cpp ^
-c-code/assimp-5.0.1/code/Common/Version.cpp ^
-c-code/assimp-5.0.1/code/Common/ZipArchiveIOSystem.cpp ^
 c-code/assimp-5.0.1/code/Material/MaterialSystem.cpp ^
 c-code/assimp-5.0.1/code/PostProcessing/ValidateDataStructure.cpp ^
 c-code/assimp-5.0.1/code/PostProcessing/ProcessHelper.cpp ^
@@ -184,37 +143,32 @@ c-code/assimp-5.0.1/code/Importer/IFC/IFCOpenings.cpp ^
 c-code/assimp-5.0.1/code/Importer/STEPParser/STEPFileReader.cpp ^
 c-code/assimp-5.0.1/code/Importer/STEPParser/STEPFileEncoding.cpp ^
 c-code/assimp-5.0.1/code/Importer/StepFile/StepFileImporter.cpp ^
-
-
-
-@REM c-code/assimp-5.0.1/code/X3D/X3DImporter.cpp ^
-@REM c-code/assimp-5.0.1/code/X3D/X3DImporter_Shape.cpp ^
-@REM c-code/assimp-5.0.1/code/X3D/X3DImporter_Light.cpp ^
-@REM c-code/assimp-5.0.1/code/X3D/X3DImporter_Geometry2D.cpp ^
-@REM c-code/assimp-5.0.1/code/X3D/X3DImporter_Geometry3D.cpp ^
-@REM c-code/assimp-5.0.1/code/X3D/X3DImporter_Rendering.cpp ^
-@REM c-code/assimp-5.0.1/code/X3D/X3DImporter_Group.cpp ^
-@REM c-code/assimp-5.0.1/code/X3D/X3DImporter_Networking.cpp ^
-@REM c-code/assimp-5.0.1/code/X3D/X3DImporter_Texturing.cpp ^
-@REM c-code/assimp-5.0.1/code/X3D/X3DImporter_Postprocess.cpp ^
-@REM c-code/assimp-5.0.1/code/X3D/X3DImporter_Metadata.cpp ^
-@REM c-code/assimp-5.0.1/code/X3D/FIReader.cpp ^
-
-
-@REM c-code/assimp-5.0.1/code/FBX/FBXImporter.cpp ^
-@REM c-code/assimp-5.0.1/code/FBX/FBXBinaryTokenizer.cpp ^
-@REM c-code/assimp-5.0.1/code/FBX/FBXParser.cpp ^
-@REM c-code/assimp-5.0.1/code/FBX/FBXDocument.cpp ^
-@REM c-code/assimp-5.0.1/code/FBX/FBXDocumentUtil.cpp ^
-@REM c-code/assimp-5.0.1/code/FBX/FBXConverter.cpp ^
-@REM c-code/assimp-5.0.1/code/FBX/FBXMeshGeometry.cpp ^
-@REM c-code/assimp-5.0.1/code/FBX/FBXDeformer.cpp ^
-@REM c-code/assimp-5.0.1/code/FBX/FBXAnimation.cpp ^
-@REM c-code/assimp-5.0.1/code/FBX/FBXNodeAttribute.cpp ^
-@REM c-code/assimp-5.0.1/code/FBX/FBXProperties.cpp ^
-@REM c-code/assimp-5.0.1/code/FBX/FBXModel.cpp ^
-@REM c-code/assimp-5.0.1/code/FBX/FBXMaterial.cpp ^
-@REM c-code/assimp-5.0.1/code/FBX/FBXTokenizer.cpp ^
+c-code/assimp-5.0.1/code/X3D/X3DImporter.cpp ^
+c-code/assimp-5.0.1/code/X3D/X3DImporter_Shape.cpp ^
+c-code/assimp-5.0.1/code/X3D/X3DImporter_Light.cpp ^
+c-code/assimp-5.0.1/code/X3D/X3DImporter_Geometry2D.cpp ^
+c-code/assimp-5.0.1/code/X3D/X3DImporter_Geometry3D.cpp ^
+c-code/assimp-5.0.1/code/X3D/X3DImporter_Rendering.cpp ^
+c-code/assimp-5.0.1/code/X3D/X3DImporter_Group.cpp ^
+c-code/assimp-5.0.1/code/X3D/X3DImporter_Networking.cpp ^
+c-code/assimp-5.0.1/code/X3D/X3DImporter_Texturing.cpp ^
+c-code/assimp-5.0.1/code/X3D/X3DImporter_Postprocess.cpp ^
+c-code/assimp-5.0.1/code/X3D/X3DImporter_Metadata.cpp ^
+c-code/assimp-5.0.1/code/X3D/FIReader.cpp ^
+c-code/assimp-5.0.1/code/FBX/FBXImporter.cpp ^
+c-code/assimp-5.0.1/code/FBX/FBXBinaryTokenizer.cpp ^
+c-code/assimp-5.0.1/code/FBX/FBXParser.cpp ^
+c-code/assimp-5.0.1/code/FBX/FBXDocument.cpp ^
+c-code/assimp-5.0.1/code/FBX/FBXDocumentUtil.cpp ^
+c-code/assimp-5.0.1/code/FBX/FBXConverter.cpp ^
+c-code/assimp-5.0.1/code/FBX/FBXMeshGeometry.cpp ^
+c-code/assimp-5.0.1/code/FBX/FBXDeformer.cpp ^
+c-code/assimp-5.0.1/code/FBX/FBXAnimation.cpp ^
+c-code/assimp-5.0.1/code/FBX/FBXNodeAttribute.cpp ^
+c-code/assimp-5.0.1/code/FBX/FBXProperties.cpp ^
+c-code/assimp-5.0.1/code/FBX/FBXModel.cpp ^
+c-code/assimp-5.0.1/code/FBX/FBXMaterial.cpp ^
+c-code/assimp-5.0.1/code/FBX/FBXTokenizer.cpp ^
 
 
 

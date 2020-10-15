@@ -29,16 +29,16 @@ void freeExporter_cpp()
 int export_model(const aiScene* scene, int outFormat)
 {
     std::vector<std::string> formats = getFormats();
-    printf("export\n");
+    // printf("export\n");
     Assimp::Exporter exporter;
-     printf("out: %d - %s\n", outFormat, formats[outFormat].c_str());
+    //  printf("out: %d - %s\n", outFormat, formats[outFormat].c_str());
     const aiExportDataBlob* blob = exporter.ExportToBlob(scene, formats[outFormat].c_str());
     if (!blob) {
-        printf("error export\n");
-        puts(exporter.GetErrorString());
+        // printf("error export\n");
+        // puts(exporter.GetErrorString());
         return 0;
     }
-    printf("successful export\n");
+    // printf("successful export\n");
     uint32_t pointer[] = {(uint32_t)blob->data, (uint32_t)blob->size};
     return (int)pointer;
 }

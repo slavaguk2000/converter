@@ -39,6 +39,9 @@ int export_model(const aiScene* scene, int outFormat)
         return 0;
     }
     // printf("successful export\n");
-    uint32_t pointer[] = {(uint32_t)blob->data, (uint32_t)blob->size};
+    uint32_t* pointer = (uint32_t*)malloc(2*sizeof(uint32_t));
+    pointer[0] = (uint32_t)blob->data;
+    pointer[1] = (uint32_t)blob->size;
+    // printf("blob pointer: %d, data: %d, size: %d\n", (int)blob, (uint32_t)blob->data, (uint32_t)blob->size);
     return (int)pointer;
 }

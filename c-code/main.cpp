@@ -15,9 +15,14 @@ int main()
 int convert_cpp(int pointer, int size, char* inFormat, int outFormat)
 {
     // printf("convert\n");
+    auto start = emscripten_get_now();
     const struct aiScene* scene = import_model((void*)pointer, size, inFormat);
+    auto first = emscripten_get_now();
     if(!scene) return 0;
-    return (int)export_model(scene, outFormat);
+    int ptr = (int)export_model(scene, outFormat);
+    auto second = emscripten_get_now();
+    printf("import %f, export %f\n", first - start, second - first);
+    return ptr;
 }
 
 extern "C" {

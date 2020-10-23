@@ -69,8 +69,11 @@ function uploadFile(file) {
         inFormat = sourceName.slice(pointIndex)
         sourceName = sourceName.slice(0, pointIndex)
         outFormat = formats.indexOf(getOutputFormat().toLowerCase())
+        deleteLastElement()
         convertedArray = convert(reader.result, inFormat, outFormat) 
         if (convertedArray){
+            console.log(convertedArray)
+            if(outFormat ==  formats.indexOf("glb")) addElement(convertedArray)
             download(convertedArray, sourceName + formats[outFormat])
             result_string += "success"
         } else {

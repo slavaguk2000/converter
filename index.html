@@ -3,10 +3,9 @@
     <head>
         <meta charset="utf-8">
         <title>Converter</title>
-
     </head>
     <body>
-        <h1>Converter</h1>
+        <h1 id='title'>Converter</h1>
         <div id="drop-area">
             <form class="my-form">
                 <p>Загрузите файл 3D модели с помощью диалога выбора файлов или перетащив нужные файлы в выделенную область</p>
@@ -41,6 +40,7 @@
                 <option value="X3D">            
             </datalist>
         </div>
+    
         <div class="res-label">
             <label for="result-label" id="result-label">Result: </label>
         </div>
@@ -49,8 +49,11 @@
         <script src="js-code/files/download.js"></script>
         <script src="js-code/files/upload.js"></script>
         <script src="js-code/wasm-lib/arrays.js"></script>
+        <script src="js-code/three/three.js"></script>
         <script type="module" src="js-code/converter/converter_core.js"></script>
         <script type="module" src="js-code/converter/converter.js"></script>
+        <script type="module" src="js-code/three/GLTFLoader.js"></script>
+        <script type="module" src="js-code/three/three_cover.js"></script>
         <link rel="stylesheet" type="text/css" href="css/dnd.css">
     </body>
 </html>

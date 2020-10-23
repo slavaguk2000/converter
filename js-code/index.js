@@ -1,4 +1,8 @@
 let Converter
+let addElement
+let deleteLastElement
+let gltf_obj = null
+
 function convert(array, inFormat, outFormat) {
     let len = array.byteLength;
     let ptr = passArrayToWasm(array, len);
@@ -17,11 +21,14 @@ function convert(array, inFormat, outFormat) {
         // console.log(error)
         return null 
     }
+    console.log(array_data_pointer)
     if(!array_data_pointer) return null
     let new_pointer = getUInt32(array_data_pointer)
     let new_size = getUInt32(array_data_pointer + 4)
     new_array = getArrayFromWasm(new_pointer, new_size);
     wasm._free(ptr);
+    wasm._free(array_data_pointer);
     // wasm._free(new_pointer);
     return new_array;
 }
+

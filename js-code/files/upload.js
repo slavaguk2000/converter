@@ -73,7 +73,7 @@ function uploadFile(file) {
         convertedArray = convert(reader.result, inFormat, outFormat) 
         if (convertedArray){
             console.log(convertedArray)
-            if(outFormat ==  formats.indexOf("glb")) addElement(convertedArray)
+            // if(outFormat ==  formats.indexOf("glb")) addElement(convertedArray)
             download(convertedArray, sourceName + formats[outFormat])
             result_string += "success"
         } else {

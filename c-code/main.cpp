@@ -19,6 +19,7 @@ int convert_cpp(int pointer, int size, char* inFormat, int outFormat)
     const struct aiScene* scene = import_model((void*)pointer, size, inFormat);
     auto first = emscripten_get_now();
     if(!scene) return 0;
+    show_gltf_on_screen(scene);
     int ptr = (int)export_model(scene, outFormat);
     auto second = emscripten_get_now();
     printf("import %f, export %f\n", first - start, second - first);

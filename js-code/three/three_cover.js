@@ -13,7 +13,9 @@ console.log(cube.geometry)
 console.log(cube.material)
 // scene.add( cube2 ); 
 var light = new THREE.AmbientLight( 0x404040 ); // soft white light
+var dirLight = new THREE.DirectionalLight( 0xffffff, 0.5 );
 scene.add( light );
+scene.add( dirLight );
 
 import { GLTFLoader } from './GLTFLoader.js';
 var loader = new GLTFLoader();

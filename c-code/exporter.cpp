@@ -2,7 +2,11 @@
 #include <stdint.h>
 #include <string.h>
 #include "formats.h"
+#include <iostream>
+#include <vector>
+#include <string>
 #include <stdlib.h> 
+#include <emscripten.h>
 #include "assimp-5.0.1/include/assimp/Exporter.hpp"
 #include "assimp-5.0.1/include/assimp/scene.h"
 
@@ -45,3 +49,28 @@ int export_model(const aiScene* scene, int outFormat)
     // printf("blob pointer: %d, data: %d, size: %d\n", (int)blob, (uint32_t)blob->data, (uint32_t)blob->size);
     return (int)pointer;
 }
+
+void show_gltf_on_screen(const aiScene* scene)
+{
+    Assimp::Exporter exporter;
+    std::vector<std::string> formats = getFormats();
+    const aiExportDataBlob* blob = exporter.ExportToBlob(scene, "glb2");
+    int pointer = (uint32_t)blob->data;
+    int size = (uint32_t)blob->size;
+    if (!pointer) {
+        printf("ERROR!\n");
+        return;
+    }
+    EM_ASM({
+        console.log('start');
+        var array = popArray($0, $1);
+        console.log(array);
+        if (array){
+            addElement(array);
+            // console.log('success');
+        } else {
+            console.log('error');
+        }
+    }, pointer, size
+    );
+}   

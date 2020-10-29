@@ -65,12 +65,7 @@ void show_gltf_on_screen(const aiScene* scene)
         console.log('start');
         var array = popArray($0, $1);
         console.log(array);
-        if (array){
-            addElement(array);
-            // console.log('success');
-        } else {
-            console.log('error');
-        }
+        postMessage({array: array, type: "show"})
     }, pointer, size
     );
 }   

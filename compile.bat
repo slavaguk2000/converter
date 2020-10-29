@@ -1,11 +1,8 @@
 call compile1.bat
 em++ -s ALLOW_MEMORY_GROWTH=1 ^
--s EXPORT_ES6=1 ^
--s MODULARIZE=1 ^
 -s SINGLE_FILE=1 ^
 -s USE_ES6_IMPORT_META=0 ^
--s ENVIRONMENT=node,web ^
--s MODULARIZE=1 ^
+-s ENVIRONMENT=worker ^
 -o3 ^
 -std=c++11 ^
 -s EXPORTED_FUNCTIONS="['_malloc','_free', '_main', '_printf']" ^
@@ -170,6 +167,9 @@ c-code/assimp-5.0.1/code/FBX/FBXModel.cpp ^
 c-code/assimp-5.0.1/code/FBX/FBXMaterial.cpp ^
 c-code/assimp-5.0.1/code/FBX/FBXTokenizer.cpp ^
 
+@REM -s ENVIRONMENT=node,web ^
+@REM -s MODULARIZE=1 ^
+@REM -s EXPORT_ES6=1 ^
 
 
 REM -O3

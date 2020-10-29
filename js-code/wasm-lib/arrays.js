@@ -13,3 +13,9 @@ function passArrayToWasm(array, size) {
 function getArrayFromWasm(ptr, len) {
 	return wasm.HEAPU8.subarray(ptr, ptr + len);
 }
+
+function popArray(ptr, size){
+    var new_array = getArrayFromWasm(ptr, size);
+    // wasm._free(ptr);
+    return new_array
+}

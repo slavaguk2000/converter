@@ -1,11 +1,4 @@
-importScripts('./../converter/converter_core.js', '../wasm-lib/arrays.js');
-
-// let Converter
-
-// let globalModulePromise = Module().then((c) => {
-//     Converter = c
-//     wasm = Converter
-// });
+importScripts('./converter_core.js', '../wasm-lib/arrays.js');
 
 wasm = Module
 

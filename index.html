@@ -6,7 +6,7 @@
     </head>
     <body>
         <h1 id='title'>Converter</h1>
-        <div id="drop-area">
+        <div id="drop-area" class="invisible_elem">
             <form class="my-form">
                 <p>Загрузите файл 3D модели с помощью диалога выбора файлов или перетащив нужные файлы в выделенную область</p>
                 <input type="file" id="fileElem" multiple accept="
@@ -50,9 +50,7 @@
         <script src="js-code/files/upload.js"></script>
         <script src="js-code/wasm-lib/arrays.js"></script>
         <script src="js-code/three/three.js"></script>
-        <!-- <script type="module" src="js-code/files/converter_core.js"></script> -->
-        <script type="module" src="js-code/converter/converter_core.js"></script>
-        <script type="module" src="js-code/converter/converter.js"></script>
+        <script src="js-code/converter/converter.js"></script>
         <script type="module" src="js-code/three/GLTFLoader.js"></script>
         <script type="module" src="js-code/three/three_cover.js"></script>
         <link rel="stylesheet" type="text/css" href="css/dnd.css">

@@ -1,14 +1,12 @@
-// import Module from './converter_core.js'
+var converWorker = new Worker("js-code/converter/convert_worker.js");
+converWorker.onmessage = function(msg){
+    if (msg.data == "init"){
+        console.log("init")
+        document.getElementById("drop-area").className = "visible_elem";
+    }  
+}
 
-// let globalModulePromise = Module().then((c) => {
-//     Converter = c
-//     wasm = Converter
-// });
-
-start_convert_worker = function(array, inFormat, outFormat, onConvert, onShow){
-    var converWorker = new Worker("js-code/files/convert_worker.js");
-    converWorker.onmessage = function(msg){
-        console.log(msg.data)       
+start_convert_worker = function(array, inFormat, outFormat, onConvert, onShow){     
         converWorker.postMessage({array: array, in: inFormat, out: outFormat})
         converWorker.onmessage = function(event){
             if(event.data.type == "convert"){
@@ -17,5 +15,4 @@ start_convert_worker = function(array, inFormat, outFormat, onConvert, onShow){
                 onShow(event.data.array)
             }
         }
-    }
 }

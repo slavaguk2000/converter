@@ -10,11 +10,10 @@
     visibility: visible;    
 }
 .invisible_elem{
-    height: 0px;
     visibility: hidden;
 }
 #drop-area.highlight {
-    border-color: purple;
+    border-color: #f1ad17;
 }
 p {
     margin-top: 0;
@@ -34,13 +33,13 @@ p {
 .button {
     display: inline-block;
     padding: 10px;
-    background: #ccc;
+    background: #21a0af;
     cursor: pointer;
     border-radius: 5px;
     border: 1px solid #ccc;
 }
 .button:hover {
-    background: #ddd;
+    background: #f1ad17;
 }
 #fileElem {
     display: none;
@@ -51,8 +50,11 @@ label {
 input{
     text-align: center;
     width: 10em;
+    color: #fff;
 }
 INPUT.default {
+    background-color: #21a0af;
+    border-radius: 5px;
     border: 1px solid #ccc;
 }
 INPUT.red {
@@ -63,24 +65,28 @@ INPUT.red {
     margin-right: auto;
     text-align: center;
     width: 15em;
+    color: #fff;
 }
 
 .my-form{
     text-align: center;
+    color: #fff;
 }
 
 h1{
     text-align: center;
     font-family: sans-serif;
+    color: #fff;
 }
 .res-label{
     text-align: center;
     font-family: sans-serif;
     margin: 2px;
+    color: #fff
 }
 canvas { 
     display: block; 
-    width: 500;
-    height: 500;
 }
-
+body{
+    background: linear-gradient(0deg, #140E2C, #000);
+}

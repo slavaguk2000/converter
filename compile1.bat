@@ -41,4 +41,5 @@ c-code/assimp-5.0.1/code/Common/StandardShapes.cpp ^
 c-code/assimp-5.0.1/code/Common/Subdivision.cpp ^
 c-code/assimp-5.0.1/code/Common/Version.cpp ^
 c-code/assimp-5.0.1/code/Common/ZipArchiveIOSystem.cpp ^
+-pthread ^
 -O3 -r -o temp/common.o

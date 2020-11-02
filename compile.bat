@@ -5,6 +5,8 @@ em++ -s ALLOW_MEMORY_GROWTH=1 ^
 -s ENVIRONMENT=worker ^
 -o3 ^
 -std=c++11 ^
+-pthread ^
+-s PTHREAD_POOL_SIZE=3 ^
 -s EXPORTED_FUNCTIONS="['_malloc','_free', '_main', '_printf']" ^
 -s EXTRA_EXPORTED_RUNTIME_METHODS="['ccall']" ^
 -o js-code/converter/converter_core.js c-code/main.cpp ^

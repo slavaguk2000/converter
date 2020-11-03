@@ -3,46 +3,70 @@
     <head>
         <meta charset="utf-8">
         <title>Converter</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="/design/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/design/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/design/favicon-16x16.png">
+        <link rel="shortcut icon" href="/design/favicon.ico">
     </head>
     <body>
-        <h1 id='title'>Converter</h1>
-        <div id="drop-area" class="invisible_elem">
-            <form class="my-form">
-                <p>Загрузите файл 3D модели с помощью диалога выбора файлов или перетащив нужные файлы в выделенную область</p>
-                <input type="file" id="fileElem" multiple accept="
-                .3ds, .prj, .3mf, .ac, .acc, .ac3d, .ase, .ask, .assbin, .b3d, .blend, .bvh, .c4d, .cob, .scn, .dae, .zae, .csm, .dxf, .fbx,
-                .gltf, .glb, .hmp, .ifc, .ifczip, .stp, .irr, .xml, .irrmesh, .lwo, .lxo, .lws, .mot, .md2, .md3, .md5mesh, .md5camera,
-                .md5anim, .mdc, .mdl, .pmx, .ms3d, .ndo, .enff, .nff, .obj, .off, .mesh, .mesh.xml, .ogex, .ply, .pk3, .q3o, .q3s,
-                .raw, .sib, .smd, .vta, .stl, .ter, .3d, .uc, .x, .xgl, .zgl, .x3d, .x3db
-                " onchange="handleFiles(this.files)">
-                <label class="button" for="fileElem">Выбрать файл</label>
-            </form>
-        </div>
-        <div id="output-format-combobox" class="choice-box">
-            <label for="output-format-choice">Choose an output format:</label>
-            <input list="output-format-list" id="output-format-choice" name="output-format-choice" class="default"
-            onfocus="this.className='default'; this.value=''" onchange="this.blur()" onclick="this.value=''"/>
-            <datalist id="output-format-list">
-                <option value="3DS">
-                <option value="3MF">            <!-- export with pointer 0 -->
-                <option value="ASSBIN">
-                <option value="ASSJSON(JSON)">
-                <option value="ASSXML">          <!-- don't open -->
-                <option value="COLLADA(DAE)">
-                <option value="FBX">
-                <option value="GLB">
-                <option value="GLTF">           <!-- don't open -->
-                <option value="OBJ">
-                <option value="PLY">
-                <option value="STEP(STP)">      <!--- big files error-->
-                <option value="STL">
-                <option value="X">
-                <option value="X3D">            
-            </datalist>
-        </div>
-    
-        <div class="res-label">
-            <label for="result-label" id="result-label">Result: </label>
+        <div id="show-area" class="horizontal-layout white-frame"></div>
+        <div id="interraction-area" class="horizontal-layout">
+            <div id="drop-area" class="invisible_elem">
+                <form class="my-form">
+                    <p>Загрузите файл 3D модели с помощью диалога выбора файлов или перетащив нужные файлы в выделенную область</p>
+                    <input type="file" id="fileElem" accept="
+                    .3ds, .prj, .3mf, .ac, .acc, .ac3d, .ase, .ask, .assbin, .b3d, .blend, .bvh, .c4d, .cob, .scn, .dae, .zae, .csm, .dxf, .fbx,
+                    .gltf, .glb, .hmp, .ifc, .ifczip, .stp, .irr, .xml, .irrmesh, .lwo, .lxo, .lws, .mot, .md2, .md3, .md5mesh, .md5camera,
+                    .md5anim, .mdc, .mdl, .pmx, .ms3d, .ndo, .enff, .nff, .obj, .off, .mesh, .mesh.xml, .ogex, .ply, .pk3, .q3o, .q3s,
+                    .raw, .sib, .smd, .vta, .stl, .ter, .3d, .uc, .x, .xgl, .zgl, .x3d, .x3db
+                    " onchange="handleFiles(this.files)">
+                    <label class="button" for="fileElem">Выбрать файл</label>
+                </form>
+            </div>
+            <div id="output-format-combobox" class="choice-box white-frame">
+                <label for="output-format-choice">Choose an output format:</label>
+                <input list="output-format-list" id="output-format-choice" name="output-format-choice" class="default"
+                onfocus="this.className='default'; this.value=''" onchange="this.blur()" onclick="this.value=''"/>
+                <datalist id="output-format-list">
+                    <option value="3DS">
+                    <option value="3MF">            <!-- export with pointer 0 -->
+                    <option value="ASSBIN">
+                    <option value="ASSJSON(JSON)">
+                    <option value="ASSXML">          <!-- don't open -->
+                    <option value="COLLADA(DAE)">
+                    <option value="FBX">
+                    <option value="GLB">
+                    <option value="GLTF">           <!-- don't open -->
+                    <option value="OBJ">
+                    <option value="PLY">
+                    <option value="STEP(STP)">      <!--- big files error-->
+                    <option value="STL">
+                    <option value="X">
+                    <option value="X3D">            
+                </datalist>
+            </div>    
+            <div id="result-area" class="white-frame">
+                <label for="result-label" id="result-label">Result: </label>
+            </div>
+            <div id="comment-area" class="white-frame">
+                <p>Конвертация происходит с использованием библиотеки Assimp, скомпилированной в WebAssembly модуль.</p>
+                <p>Данный проект находится в состоянии тестирования. Со временем он будет дорабатываться и улучшаться.</p> 
+            </div>
+            <div id="test-result-info" class="white-frame">
+                <p>На данный момент протистированы и работают следующие конвертации:</p>
+                <ul>
+                    <li>3ds   --> odj, stl, ply, fbx</li>
+                    <li>blend --> ply</li>
+                    <li>dae   --> odj, ply, glb, fbx</li>
+                    <li>fbx   --> odj, 3ds</li>
+                    <li>ifc   --> odj, stl, ply, 3ds, glb, fbx</li>
+                    <li>obj   --> ply, 3ds, fbx</li>
+                    <li>ply   --> odj, 3ds</li>
+                    <li>stl   --> odj, ply, 3ds, glb, fbx</li>
+                    <li>x     --> odj, ply, 3ds, fbx</li>
+                    <li>x3d   --> odj, ply, 3ds, fbx</li>
+                </ul>
+            </div>
         </div>
         <script src="js-code/index.js"></script>
         <script src="js-code/converter/formats.js"></script>

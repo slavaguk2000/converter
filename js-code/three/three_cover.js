@@ -1,9 +1,16 @@
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera( 75, 1, 0.1, 1000 );
 
-var renderer = new THREE.WebGLRenderer();
-renderer.setSize( window.innerHeight-300, window.innerHeight-300 );
-document.getElementById('title').appendChild( renderer.domElement );
+var renderer = new THREE.WebGLRenderer({alpha: true});
+resize_convas = function(){
+    var size = Math.min(window.innerHeight, window.innerWidth/2);
+    renderer.setSize(size, size - 20);
+    document.getElementById('show-area').appendChild( renderer.domElement );    
+}
+resize_convas();
+window.addEventListener('resize', function(){
+    requestAnimationFrame(resize_convas)
+})
 renderer.domElement.style.margin = "0 auto";
 const light = new THREE.AmbientLight( 0x404040 ); // soft white light
 const dirLight = new THREE.DirectionalLight( 0xbbbbbb, 0.5 );
@@ -16,6 +23,7 @@ scene.add( pointLight );
 var logo = get5lyLogo();
 var logoGroup = new THREE.Object3D();
 logoGroup.add(logo.mainRotationGroup);
+var logo_on_scene = false;
 
 
 import { GLTFLoader } from './GLTFLoader.js';
@@ -31,7 +39,9 @@ loader.load( 'test_models/5.glb', function ( gltf ) {
             child.material.color.set( 0xf1ad17 );
             ////
             logoGroup.add(child);
+            // logo.mainRotationGroup.add(child);
             scene.add(logoGroup);
+            logo_on_scene = true;
             // group.add(logoGroup)
         }
     })
@@ -72,6 +82,10 @@ addElement = function(blob){
             modelBoundingBox.max.z - modelBoundingBox.min.z), 0.5);
         camera.position.z = camera_position_z  * 40
         console.log(camera_position_z)
+        if (logo_on_scene) {
+            animate = gltfAnimate;
+            scene.remove(logoGroup)
+        }
         scene.add( gltf_obj );
 
     }, function(err){
@@ -80,7 +94,6 @@ addElement = function(blob){
 }
 
 deleteLastElement = function(){
-    animate = gltfAnimate;
     if (gltf_obj){
         scene.remove(gltf_obj)
     }

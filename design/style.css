@@ -1,0 +1,62 @@
+h1 {
+    color: red;
+}
+
+p, li {
+    color: green;
+}
+
+li{
+    list-style-type: none;
+}
+
+.special {
+    color: orange;
+    font-weight: bold;
+
+}
+
+li em{
+    text-transform: uppercase;
+}
+
+h1 + p{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a:link{
+    color: pink;
+}
+a:visited{
+    visibility: hidden;
+    color: seagreen;
+}
+a:focus{
+    color: red;
+}
+
+a:hover{
+    visibility: hidden;
+}
+
+.outer {
+    border: 5px solid black;
+  }
+  
+  .box {
+    padding: 10px;
+    width: calc(100% - 20px);
+    background-color: rebeccapurple;
+    color: white;
+    transform: rotate(0.8turn);
+  }
+
+  .box:hover{
+      background-color: snow;
+  }
+
+  @media (min-width: 80em) {
+      body{
+          background-color: springgreen;
+      }
+  }

@@ -1,7 +1,7 @@
 var converWorker = new Worker("js-code/converter/convert_worker.js");
 converWorker.onmessage = function(msg){
     if (msg.data == "init"){
-        document.getElementById("drop-area").className = "visible_elem";
+        document.getElementById("drop-area").className = "visible_elem  white-frame";
     }  
 }
 

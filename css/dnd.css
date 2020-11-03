@@ -1,10 +1,19 @@
-#drop-area {
+#drop-area {   
+    width: 480px; 
+    margin: 10px auto;
+    font-family: sans-serif;
+    text-align: center;
+}
+.white-frame {
     border: 2px dashed #ccc;
     border-radius: 20px;
-    width: 480px;
-    font-family: sans-serif;
-    margin: 10px auto;
     padding: 20px;
+}
+@media (min-width: 1250px) and (min-height: 800px) 
+{
+    #drop-area{
+        margin: calc(50vh - 400px) auto 10px;
+    }    
 }
 .visible_elem{
     visibility: visible;    
@@ -14,21 +23,6 @@
 }
 #drop-area.highlight {
     border-color: #f1ad17;
-}
-p {
-    margin-top: 0;
-}
-.my-form {
-    margin-bottom: 1px;
-}
-#gallery {
-    margin-top: 1px;
-}
-#gallery img {
-    width: 150px;
-    margin-bottom: 1px;
-    margin-right: 1px;
-    vertical-align: middle;
 }
 .button {
     display: inline-block;
@@ -51,10 +45,12 @@ input{
     text-align: center;
     width: 10em;
     color: #fff;
-}
-INPUT.default {
+    margin-top: 10px;
     background-color: #21a0af;
     border-radius: 5px;
+}
+INPUT.default {
+
     border: 1px solid #ccc;
 }
 INPUT.red {
@@ -78,15 +74,60 @@ h1{
     font-family: sans-serif;
     color: #fff;
 }
-.res-label{
+#res-label{
     text-align: center;
     font-family: sans-serif;
     margin: 2px;
     color: #fff
 }
 canvas { 
-    display: block; 
+    display: block;
 }
+#show-area {
+    padding: 0;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 0%;
+    margin: 0%;
+}
+
+#result-area {
+    margin: 10px auto;
+    width: 200px;
+}
+
 body{
+    text-align:center;
     background: linear-gradient(0deg, #140E2C, #000);
+    color: white;
+    align-content: center;
+    vertical-align: middle;
+    text-align: center;
+    display: flex; 
 }
+.horizontal-layout{
+    float: left;
+    width: 50vw;
+    margin: 10px;
+    vertical-align: middle;
+}
+
+#comment-area {
+    width: 480px;
+    margin: 10px auto;
+}
+#test-result-info {
+    width: 480px;
+    margin: 10px auto;
+}
+
+ul {
+    text-align: left;
+}
+
+
+/*TODO : convas vertical center

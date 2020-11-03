@@ -45,7 +45,6 @@ function uploadFile(file) {
         inFormat = sourceName.slice(pointIndex)
         sourceName = sourceName.slice(0, pointIndex)
         outFormat = formats.indexOf(getOutputFormat().toLowerCase())
-        deleteLastElement()
         var onConvert = function(convertedArray) {
             if (convertedArray){
                 console.log(convertedArray)

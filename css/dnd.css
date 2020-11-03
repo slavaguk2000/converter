@@ -102,7 +102,7 @@ html, body{
 
 body{
     text-align:center;
-    background: linear-gradient(0deg, #140E2C, #000);
+    background: linear-gradient(0deg, #150724, #16355a);
     color: white;
     align-content: center;
     vertical-align: middle;
@@ -130,4 +130,4 @@ ul {
 }
 
 
-/*TODO : convas vertical center
+/*TODO : convas vertical center, load image

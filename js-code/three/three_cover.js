@@ -38,8 +38,8 @@ loader.load( 'test_models/5.glb', function ( gltf ) {
             console.log(child.material);
             child.material.color.set( 0xf1ad17 );
             ////
-            logoGroup.add(child);
-            // logo.mainRotationGroup.add(child);
+            // logoGroup.add(child);
+            logo.mainRotationGroup.add(child);
             scene.add(logoGroup);
             logo_on_scene = true;
             // group.add(logoGroup)

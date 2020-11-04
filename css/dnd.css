@@ -15,9 +15,6 @@
         margin: calc(50vh - 400px) auto 10px;
     }    
 }
-.visible_elem{
-    visibility: visible;    
-}
 .invisible_elem{
     visibility: hidden;
 }

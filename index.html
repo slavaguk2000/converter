@@ -7,6 +7,8 @@
         <link rel="icon" type="image/png" sizes="32x32" href="/design/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/design/favicon-16x16.png">
         <link rel="shortcut icon" href="/design/favicon.ico">
+        <link href="/fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet"> <!--load all styles -->
+        <script defer src="/fontawesome-free-5.15.1-web/js/all.js"></script>
     </head>
     <body>
         <div id="show-area" class="horizontal-layout white-frame"></div>
@@ -47,6 +49,12 @@
             </div>    
             <div id="result-area" class="white-frame">
                 <label for="result-label" id="result-label">Result: </label>
+                    <svg id="convert-spinner" aria-hidden="true" focusable="false" data-prefix="fad" data-icon="spinner" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-spinner fa-w-16 fa-spin fa-lg invisible_elem">
+                    <g class="fa-group">
+                    <path fill="currentColor" d="M108.92 355.08a48 48 0 1 0 48 48 48 48 0 0 0-48-48zM256 416a48 48 0 1 0 48 48 48 48 0 0 0-48-48zm208-208a48 48 0 1 0 48 48 48 48 0 0 0-48-48zm-60.92 147.08a48 48 0 1 0 48 48 48 48 0 0 0-48-48zm0-198.16a48 48 0 1 0-48-48 48 48 0 0 0 48 48z" class="fa-secondary"></path>
+                    <path fill="currentColor" d="M108.92 60.92a48 48 0 1 0 48 48 48 48 0 0 0-48-48zM48 208a48 48 0 1 0 48 48 48 48 0 0 0-48-48zM256 0a48 48 0 1 0 48 48 48 48 0 0 0-48-48z" class="fa-primary"></path>
+                    </g>
+                </svg>
             </div>
             <div id="comment-area" class="white-frame">
                 <p>Конвертация происходит с использованием библиотеки Assimp, скомпилированной в WebAssembly модуль.</p>

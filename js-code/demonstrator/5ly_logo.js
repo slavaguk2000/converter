@@ -11,9 +11,9 @@ function createOrbitPlanet(material, radius, angle){
     return planet;
 }
 
-function createHourPlanetGroup(material){
+function createHourPlanetGroup(material, bigPlanet){
     var hourPlanetGroup = new THREE.Object3D();
-    hourPlanetGroup.add(createOrbitPlanet(material, 10, 176));
+    hourPlanetGroup.add(bigPlanet);
     hourPlanetGroup.add(createOrbitPlanet(material, 5, 56));
     return hourPlanetGroup;
 }
@@ -36,13 +36,42 @@ function get5lyLogo(){
     var material = new THREE.MeshStandardMaterial( { color: 0x21a0af } );
     group.add(createPlanet(material, 12));
     group.add(createOrbit(material));
-    hourPlanetGroup = createHourPlanetGroup(material);
+    bigPlanet = createOrbitPlanet(material, 10, 176)
+    hourPlanetGroup = createHourPlanetGroup(material, bigPlanet);
     group.add(hourPlanetGroup);
     antiHourPlanetGroup = createAntiHourPlanetGroup(material);
     group.add(antiHourPlanetGroup);
     return {
+        bigPlanet: bigPlanet, 
         hourPlanetGroup: hourPlanetGroup,
         antiHourPlanetGroup: antiHourPlanetGroup,
         mainRotationGroup: group
     };
+}
+
+var logo = get5lyLogo();
+var logoGroup = new THREE.Object3D();
+logoGroup.add(logo.mainRotationGroup);
+var logo_on_scene = false;
+
+var onLoaderInit = function() {
+    loader.load( 'test_models/5_2.glb', function ( gltf ) {
+        gltf.scene.traverse(function(child){
+            if ( child.type == "Mesh"){
+                child.position.x -= 29;
+                child.position.y -= 33;
+                child.position.z -= 6.5;
+                console.log(child.material);
+                child.material.color.set( 0xf1ad17 );
+                ////
+                // logoGroup.add(child);
+                logo.mainRotationGroup.add(child);
+                scene.add(logoGroup);
+                logo_on_scene = true;
+                // group.add(logoGroup)
+            }
+        })
+    }, undefined, function ( error ) {
+        console.error( error );
+    } );
 }

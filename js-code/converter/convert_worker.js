@@ -6,7 +6,6 @@ wasm['onRuntimeInitialized'] = function() {
     postMessage("init")
 }
 
-
 onmessage = function(convert_event)
 {
     let array = convert_event.data.array

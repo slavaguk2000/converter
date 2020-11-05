@@ -33,34 +33,11 @@ function setResult(result_string){
 function uploadFile(file) {
     // console.log("Handle");
     result_string = "Result: "
-    setResult(result_string)
+    setResult(result_string);
     let reader = new FileReader();
-    reader.readAsArrayBuffer(file)
-    reader.onloadend = function(){
-        sourceName = file.name
-        pointIndex = sourceName.lastIndexOf(".") + 1
-        if(!pointIndex) return;
-        inFormat = sourceName.slice(pointIndex)
-        sourceName = sourceName.slice(0, pointIndex)
-        outFormat = formats.indexOf(getOutputFormat().toLowerCase())
-        var onConvert = function(convertedArray) {
-            if (convertedArray){
-                console.log(convertedArray)
-                download(convertedArray, sourceName + formats[outFormat])
-                result_string += "success"
-            } else {
-                result_string += "error"
-            }
-            setResult(result_string)
-        }
-        var onShow = function(array) {
-            if (array){
-                addElement(array);
-                // console.log('success');
-            } else {
-                console.log('error');
-            }
-        }
-        convert(reader.result, inFormat, outFormat, onConvert, onShow) 
+    reader.readAsArrayBuffer(file);
+    let startProcess = function(){
+        process(reader, file);
     }
+    reader.onloadend = startProcess;
 }

@@ -8,7 +8,7 @@ wasm['onRuntimeInitialized'] = function() {
 
 onmessage = function(convert_event)
 {
-    let array = convert_event.data.array
+    let array = convert_event.data.array//TODO : try to implemet shared array
     let len = array.byteLength;
     let ptr = passArrayToWasm(array, len);
     console.log("worker start")

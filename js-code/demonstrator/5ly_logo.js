@@ -61,14 +61,10 @@ var onLoaderInit = function() {
                 child.position.x -= 29;
                 child.position.y -= 33;
                 child.position.z -= 6.5;
-                // console.log(child.material);
                 child.material.color.set( 0xf1ad17 );
-                ////
-                // logoGroup.add(child);
                 logo.mainRotationGroup.add(child);
                 scene.add(logoGroup);
                 logo_on_scene = true;
-                // group.add(logoGroup)
             }
         })
     }, undefined, function ( error ) {

@@ -32,16 +32,3 @@ addLight = function(){
     scene.add( lightRotationGroup );
 }();
 
-
-
-
-var whiteBox = new THREE.Box3();
-const dimensions = new THREE.Vector3().subVectors( whiteBox.max, whiteBox.min );
-const whiteBoxGeometry = new THREE.BoxBufferGeometry(dimensions.x, dimensions.y, dimensions.z);
-
-// make a mesh
-const material = new THREE.MeshLambertMaterial({
-    color: 0xffffff, transparent:true, opacity:.25
-});
-var whiteBoxMesh = new THREE.Mesh(whiteBoxGeometry, material); 
-scene.add(whiteBoxMesh);

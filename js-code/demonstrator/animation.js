@@ -1,16 +1,12 @@
 const scaleBorder5In = 5.3;
 const scaleBorder5Out = 4.56;
 const scaleBorderFree = 0.3;
-const scaleLenIn = 0.2;
+const scaleLen = 0.3;
 const bigRadius = 11;
 const middleRadius = 6;
 const smallRadius = 5;
 const rotateStepOrbitPlanet = 0.02;
 const mainRotateStep = 0.01;
-const mainScaleStep = (bigRadius / bigRadius - smallRadius / bigRadius) / (scaleLenIn / rotateStepOrbitPlanet);
-const scaleLenOut = (middleRadius / bigRadius - smallRadius / bigRadius) / mainScaleStep * rotateStepOrbitPlanet;
-const scaleLenFree = (bigRadius / bigRadius - middleRadius / bigRadius) / mainScaleStep * rotateStepOrbitPlanet;
-
 
 var scaleObject = function(obj, scale) {
     obj.scale.x += scale;
@@ -18,7 +14,8 @@ var scaleObject = function(obj, scale) {
     obj.scale.z += scale;
 };
 
-let tryScaleBigPlanet = function(borderAngle, scaleLen, scaleStep) {
+let tryScaleBigPlanet = function(borderAngle, startRadius, endRadius) {
+    let scaleStep = (endRadius / bigRadius - startRadius / bigRadius) / (scaleLen / rotateStepOrbitPlanet);
     if (logo.hourPlanetGroup.rotation.z >= borderAngle &&
         logo.hourPlanetGroup.rotation.z < borderAngle + scaleLen){
             scaleObject(logo.bigPlanet, scaleStep);
@@ -32,42 +29,19 @@ var logoAnimate = function () {
     if (logo.hourPlanetGroup.rotation.z < 0){
         logo.hourPlanetGroup.rotation.z += 2 * Math.PI;
     }
-    tryScaleBigPlanet(scaleBorder5In, scaleLenIn, -mainScaleStep);
-    tryScaleBigPlanet(scaleBorder5Out, scaleLenOut, mainScaleStep);
-    tryScaleBigPlanet(scaleBorderFree, scaleLenFree, mainScaleStep);
-
-    // console.log(logo.hourPlanetGroup.rotation.z)
+    tryScaleBigPlanet(scaleBorder5In, bigRadius, smallRadius);
+    tryScaleBigPlanet(scaleBorder5Out, smallRadius, middleRadius);
+    tryScaleBigPlanet(scaleBorderFree, middleRadius, bigRadius);
     logo.antiHourPlanetGroup.rotation.z += rotateStepOrbitPlanet;
     renderer.render( scene, camera );
 };
 
-// const gltfAnimate = function () {
-//     requestAnimationFrame( animateObject );
-//     if (!gltf_obj) return;
-//     // gltf_obj.rotation.x += 0.000001;
-//     gltf_obj.rotation.y += 0.01;
-//     // gltf_obj.rotation.z += 0.0001;
-//     renderer.render( scene, camera );
-// };
 const gltfAnimate = function () {
     requestAnimationFrame( animateObject );
     if (!gltfMainScene) return;
-    // console.log(gltf_obj)
-    // gltf_obj.rotation.x += 0.000001;
-    whiteBox.setFromObject(gltfMainScene);
-    const dimensions = new THREE.Vector3().subVectors( whiteBox.max, whiteBox.min );
-    const whiteBoxGeometry = new THREE.BoxBufferGeometry(dimensions.x, dimensions.y, dimensions.z);
-
-    // move new mesh center so it's aligned with the original object
-    const matrix = new THREE.Matrix4().setPosition(dimensions.addVectors(whiteBox.min, whiteBox.max).multiplyScalar( 0.5 ));
-    whiteBoxGeometry.applyMatrix4(matrix);
-    whiteBoxMesh.geometry = whiteBoxGeometry; 
     gltfMainScene.rotation.y += 0.01;
-    // gltf_obj.rotation.z += 0.0001;
-
     renderer.render( scene, camera );
 };
-//
 
 var animateObject = logoAnimate;
 animateObject();

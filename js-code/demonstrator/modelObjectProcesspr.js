@@ -1,17 +1,21 @@
-
-var ooo
-
 let setObjectOnCenter = function(object){
-    //TODO
-    ooo = object
-    console.log(object)
+
+    const ambientBox = new THREE.Box3();
+    ambientBox.setFromObject(object);
+    object.position.x -= (ambientBox.max.x + ambientBox.min.x) / 2;
+    object.position.y -= (ambientBox.max.y + ambientBox.min.y) / 2;
+    object.position.z -= (ambientBox.max.z + ambientBox.min.z) / 2;
 }
 
 let setCameraPozition = function(object){
-    var modelBoundingBox = new THREE.Box3().setFromObject(object);
-    var camera_position_z = Math.pow(Math.min(modelBoundingBox.max.x - modelBoundingBox.min.x,
-        modelBoundingBox.max.y - modelBoundingBox.min.y,
-        modelBoundingBox.max.z - modelBoundingBox.min.z), 0.5);
-    camera.position.z = camera_position_z  * 40
-    console.log(camera_position_z)
+    const ambientBox = new THREE.Box3();
+    ambientBox.setFromObject(object);
+    camera.position.z = Math.max(
+        ambientBox.max.x, -ambientBox.min.x, 
+        ambientBox.max.y, -ambientBox.min.y, 
+        ambientBox.max.z, -ambientBox.min.z 
+        ) + Math.max(
+        ambientBox.max.x - ambientBox.min.x,
+        (ambientBox.max.y - ambientBox.min.y) * camera.aspect 
+    ) / 2 / Math.tan( camera.fov / 2 * Math.PI / 180);
 }

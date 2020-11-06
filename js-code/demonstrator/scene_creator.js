@@ -1,8 +1,8 @@
-var scene = new THREE.Scene();
+const scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera( 75, 1, 0.1, 1000 );
 
 var renderer = new THREE.WebGLRenderer({alpha: true});
-var resizeCanvas = function(){
+const resizeCanvas = function(){
     var size = Math.min(window.innerHeight, window.innerWidth/2);
     renderer.setSize(size, size - 20);
     document.getElementById('show-area').appendChild( renderer.domElement );    
@@ -16,12 +16,32 @@ correctScene = function(){
     camera.position.z = 100;
 }();
 
+var lightRotationGroup;
 addLight = function(){
-    const light = new THREE.AmbientLight( 0x404040 ); // soft white light
+    const mainlight = new THREE.AmbientLight( 0x404040 ); // soft white light
     const dirLight = new THREE.DirectionalLight( 0xbbbbbb, 0.5 );
-    const pointLight = new THREE.PointLight( 0xaaaaaa, 1);
-    pointLight.position.set( -150, -150, 60 );
-    scene.add( light );
+    const dinamicPointLight = new THREE.PointLight( 0x444444, 1);
+    const staticPointLight = new THREE.PointLight( 0xaaaaaa, 1);
+    dinamicPointLight.position.set( -40, -10, 40 );
+    staticPointLight.position.set( -150, -150, 60 );
+    lightRotationGroup = new THREE.Object3D();
+    lightRotationGroup.add(dinamicPointLight);
+    scene.add( mainlight );
     scene.add( dirLight );
-    scene.add( pointLight );
+    scene.add( staticPointLight )
+    scene.add( lightRotationGroup );
 }();
+
+
+
+
+var whiteBox = new THREE.Box3();
+const dimensions = new THREE.Vector3().subVectors( whiteBox.max, whiteBox.min );
+const whiteBoxGeometry = new THREE.BoxBufferGeometry(dimensions.x, dimensions.y, dimensions.z);
+
+// make a mesh
+const material = new THREE.MeshLambertMaterial({
+    color: 0xffffff, transparent:true, opacity:.25
+});
+var whiteBoxMesh = new THREE.Mesh(whiteBoxGeometry, material); 
+scene.add(whiteBoxMesh);

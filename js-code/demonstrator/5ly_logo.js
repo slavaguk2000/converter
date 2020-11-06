@@ -33,7 +33,7 @@ function createOrbit(material){
 
 function get5lyLogo(){
     var group = new THREE.Object3D();
-    var material = new THREE.MeshStandardMaterial( { color: 0x21a0af } );
+    var material = new THREE.MeshPhongMaterial( { color: 0x21a0af } );
     group.add(createPlanet(material, 12));
     group.add(createOrbit(material));
     bigPlanet = createOrbitPlanet(material, 10, 176)
@@ -61,7 +61,7 @@ var onLoaderInit = function() {
                 child.position.x -= 29;
                 child.position.y -= 33;
                 child.position.z -= 6.5;
-                console.log(child.material);
+                // console.log(child.material);
                 child.material.color.set( 0xf1ad17 );
                 ////
                 // logoGroup.add(child);

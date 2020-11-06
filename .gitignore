@@ -1,9 +1,10 @@
 test_models/
 .vscode/
-js-code/converter/converter_core.js
+js-code/converter/converter_core.*
 *.zip
 *.svg
 *.dwl
 *.dwl2
 *.png
 fontawesome-free-5.15.1-web/
+*.docx

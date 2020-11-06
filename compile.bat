@@ -1,13 +1,13 @@
 call compile1.bat
 em++ -s ALLOW_MEMORY_GROWTH=1 ^
+-s EXPORT_ES6=1 ^
+-s MODULARIZE=1 ^
 -s SINGLE_FILE=1 ^
 -s USE_ES6_IMPORT_META=0 ^
--s ENVIRONMENT=worker ^
+-s ENVIRONMENT=node,web ^
 -o3 ^
 -std=c++11 ^
--pthread ^
--s PTHREAD_POOL_SIZE=3 ^
--s EXPORTED_FUNCTIONS="['_malloc','_free', '_main', '_printf']" ^
+-s EXPORTED_FUNCTIONS="['_malloc','_free', '_main']" ^
 -s EXTRA_EXPORTED_RUNTIME_METHODS="['ccall']" ^
 -o js-code/converter/converter_core.js c-code/main.cpp ^
 temp/common.o ^
@@ -173,6 +173,8 @@ c-code/assimp-5.0.1/code/FBX/FBXTokenizer.cpp ^
 @REM -s MODULARIZE=1 ^
 @REM -s EXPORT_ES6=1 ^
 
+@REM -pthread ^
+@REM -s PTHREAD_POOL_SIZE=3 ^
 
 REM -O3
 REM c-code/exporter.cpp
